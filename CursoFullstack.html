@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlists de Tecnologia</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .playlist { margin: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+        iframe { width: 100%; max-width: 560px; height: 315px; }
+    </style>
+</head>
+<body>
+    <h1>Playlists de Tecnologia</h1>
+    
+    <script>
+        const playlists = {
+            "HTML": "PLx4x_zx8csUiVHRDO_7qhOaeNrrQ5uU8c",
+            "CSS": "PLx4x_zx8csUi47Bnugpk78nqJN6rYvEnV",
+            "JAVASCRIPT": "PLx4x_zx8csUg_AxxbVWHEyAJ6cBdsYc0T",
+            "TYPESCRIPT": "PLb2HQ45KP0Wsk-p_0c6ImqBAEFEY-LU9H",
+            "REACTJS": "PLedVhPP7RyiKOiiGMTMYil3yTEoOxO7CK",
+            "VUEJS": "PLWXw8Gu52TRL3sY3esdsH2PxYiRdXwfvX",
+            "NEXTJS": "PLtOMJw0mwbp1hfhMbw0uv29QZFdElmXAt",
+            "NODEJS": "PLJ_KhUnlXUPtbtLwaxxUxHqvcNQndmI4B",
+            "EXPRESSJS": "PL8dsUiOEeVuuei08br211E8weiZCMQ5xN",
+            "NESTJS": "PLhqYZdo-g9iR9AcfOxiU_6TQE2M5lY1ZT",
+            "ANGULAR": "PLGxZ4Rq3BOBoSRcKWEdQACbUCNWLczg2G",
+            "PYTHON": "PLvE-ZAFRgX8hnECDn1v9HNTI71veL3oW0",
+            "FLASK": "PLC005Bu5SqlTwNzYFfCIT9KCuiwkt1rAr",
+            "DJANGO": "PLLVddSbilcumgeyk0z6ko5U_FYPfbRO2C",
+            "REDIS": "PLWhiA_CuQkbA_nmwPvjxVUr4XucYUrYXi",
+            "MYSQL": "PLucm8g_ezqNrWAQH2B_0AnrFY5dJcgOLR",
+            "MONGODB": "PLqONbZa3fPe7tY4QoVzN3fIJ_z8YweMvp",
+            "POSTGRESQL": "PLucm8g_ezqNoAkYKXN_zWupyH6hQCAwxY",
+            "GIT": "PLs6_IgOQ2n4aZg1Df2DNebuvpX32Y4f6",
+            "DOCKER": "PLrb1e2Mp6N_tXQryuDVzOq4SLQKqVv1uz",
+            "AWS": "PLtL97Owd1gkQ0dfqGW8OtJ-155Gs67Ecz",
+            "AZURE": "PLj8JhcdUB95awioM24Os3__p4dakaQBm3",
+            "KUBERNETES": "PLnOICPAPShyTwuLit7vP6In9kETQ0BSnQ",
+            "GRAPHQL": "PLK5FPzMuRKlyeZYiJNA54j4lpfxHGlz0j",
+            "REST": "PL3B-OV5dZTqbaLi1f2UmXEWbcx9WyYaTX",
+            "GITHUB ACTIONS": "PLs6_IgOQ2n4Yu_AhxDqnkzNH2sqsIfU-8"
+        };
+
+        window.onload = () => {
+            const container = document.createElement('div');
+            container.style.display = 'flex';
+            container.style.flexWrap = 'wrap';
+            container.style.justifyContent = 'center';
+            
+            for (const [title, playlistId] of Object.entries(playlists)) {
+                const div = document.createElement('div');
+                div.className = 'playlist';
+                div.innerHTML = `<h2>${title}</h2>
+                    <iframe src="https://www.youtube.com/embed/videoseries?list=${playlistId}" frameborder="0" allowfullscreen></iframe>`;
+                container.appendChild(div);
+            }
+            document.body.appendChild(container);
+        };
+    </script>
+</body>
+</html>
